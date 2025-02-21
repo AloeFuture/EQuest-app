@@ -17,7 +17,7 @@
                             
                             VStack(alignment: .leading, spacing: 16) {
                                 
-                                HStack(alignment: .top) {
+                                HStack() {
                                     Text("Learn how to start a sustainable lifestyle")
 //                                        .padding(.top, 60)
                                         .font(.title2)

@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct ContributeView: View {
-    @State var goToReportOne = true
+    @State var goToReportOne = false
+    @State var goToReportTwo = false
+    @State var goToReportThree = false
+    @State var goToReportFour = false
+    
     
     var body: some View {
         NavigationStack {
@@ -18,15 +22,15 @@ struct ContributeView: View {
                     })
 
                     ContributeButton(imageName: "Button2", action: {
-                        print("What is Waste Sorting? tapped")
+                        goToReportTwo = true
                     })
 
                     ContributeButton(imageName: "Button3", action: {
-                        print("Selective waste bins tapped")
+                        goToReportThree = true
                     })
 
                     ContributeButton(imageName: "Button4", action: {
-                        print("Cycling and sustainability tapped")
+                        goToReportFour = true
                     })
                 }
                 .padding(.top, 30 )
@@ -39,6 +43,15 @@ struct ContributeView: View {
             .navigationBarHidden(true)
             .navigationDestination(isPresented: $goToReportOne) {
                 CReport1()
+            }
+            .navigationDestination(isPresented: $goToReportTwo) {
+                CReport2()
+            }
+            .navigationDestination(isPresented: $goToReportThree) {
+                CReport3()
+            }
+            .navigationDestination(isPresented: $goToReportFour) {
+                CReport4()
             }
 
         }
