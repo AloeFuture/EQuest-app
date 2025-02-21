@@ -5,37 +5,44 @@ struct MainView: View {
         NavigationView {
             TabView {
                     EHubView()
+                    .toolbarBackgroundVisibility(.visible, for: .tabBar)
+                    .toolbarBackground(Color(red: 231, green: 226, blue: 0.79), for: .tabBar)
                         .tabItem {
                             Image(systemName: "house.fill")
                             Text("EHub")
-                        }                .toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(Color.yellow, for: .tabBar)
+                        }
+                
+                
                     
                     // Tab 2: Contacts
                     ContactsView()
+                    .toolbarBackgroundVisibility(.visible, for: .tabBar)
+                    .toolbarBackground(Color(red: 231, green: 226, blue: 0.79), for: .tabBar)
                         .tabItem {
                             Image(systemName: "book.fill")
                             Text("Contacts")
-                        }                .toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(Color.yellow, for: .tabBar)
-                    
+                        }
+                
                     // Tab 3: Contribute
                     ContributeView()
+                    .toolbarBackgroundVisibility(.visible, for: .tabBar)
+                    .toolbarBackground(Color(red: 231, green: 226, blue: 0.79), for: .tabBar)
                         .tabItem {
                             Image(systemName: "plus.circle")
                             Text("Contribute")
-                        }                .toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(Color.yellow, for: .tabBar)
-                    
+                        }
+                
                     // Tab 4: Profile
                     ProfileView()
+                    .toolbarBackgroundVisibility(.visible, for: .tabBar)
+                    .toolbarBackground(Color(red: 231, green: 226, blue: 0.79), for: .tabBar)
                         .tabItem {
                             Image(systemName: "person.fill")
                             Text("Profile")
-                        }.toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(Color.yellow, for: .tabBar)
-                    }
-            .accentColor(.green) // Cor dos ícones ativos
+                        }
+            }
+            .accentColor(.black) // Cor dos ícones ativos
+            
             
         }
     }
